@@ -30,7 +30,6 @@
 #     - pciutils         (provides `lspci`)
 #     - acpi             (battery information)
 #     - lsb-release      (OS version info)
-#     - pkg-config       (used for EFL version detection)
 #
 #   Usually preinstalled:
 #     - coreutils        (df, printf, etc.)
@@ -39,9 +38,10 @@
 #     - grep, sed, awk
 #
 #   Optional:
-#     - Moksha    (for `enlightenment_remote` version info)
-#	  - inxi      (for 'copy report')
-#	  - xclip     (also for 'copy report')
+#     - Moksha           (for `enlightenment_remote` version info)
+#	  - inxi             (for 'copy report')
+#	  - xsel             (also for 'copy report')
+#     - pkg-config       (used for EFL version detection)
 #
 # Notes:
 #   - Run `sudo sensors-detect` after installing lm-sensors for full sensor data.
@@ -101,8 +101,7 @@ do
 done
 ) | \
 yad --plug=$KEY --tabnum=1 --image=cpu --text="$(_ "CPU information")" \
---list --no-selection --column="$(_ "Parameter")" --column="$(_ "Value")" \
---button="$(_ "Copy"):bash -c 'xsel --clipboard < \"$CPU_INFO\"'" &
+--list --no-selection --column="$(_ "Parameter")" --column="$(_ "Value")" &
 
 # GPU tab
 (GPU=$(lspci | grep -Ei 'vga|3d|display' | head -n1 | cut -d' ' -f5-)
@@ -207,13 +206,63 @@ echo "======================================="
 inxi -c 0 -N | sed '/^Network:$/d'
 
 } > "$REPORT"  
+
+############## EFL version extraction ##############
+
+get_efl_version()
+{
+    local version
+
+    # 1) efl-version
+    
+    if command -v efl-version >/dev/null 2>&1; then
+        version=$(efl-version 2>/dev/null)
+        [ -n "$version" ] && {
+            echo "$version"
+            return
+        }
+    fi
+
+    # 2) pkg-config 
+ 
+    if command -v pkg-config >/dev/null 2>&1; then
+        version=$(pkg-config --modversion efl 2>/dev/null)
+
+        # if there's no efl.pc
+        if [ -z "$version" ]; then
+            version=$(pkg-config --modversion elementary 2>/dev/null)
+        fi
+
+        [ -n "$version" ] && {
+            echo "$version"
+            return
+        }
+    fi
+
+    # 3) libevas1 fallback
+
+    if command -v dpkg-query >/dev/null 2>&1; then
+        version=$(dpkg-query -W -f='${Version}' libevas1 2>/dev/null)
+
+        [ -n "$version" ] && {
+            echo "$version"
+            return
+        }
+    fi
+
+    # 4) Nothing found
+
+    echo "$(_ "Not found")"
+}
+
+####################################################
   
 # main dialog
 TXT="<b>$(_ "Hardware system information")</b>\n\n"
 TXT+="\t$(_ "OS"): $(lsb_release -ds) $(_ "on") $(hostname)\n"
-TXT+="\tEFL: $(pkg-config --modversion efl 2>/dev/null || echo "$(_ "Not installed")")\n"
+TXT+="\tEFL: $(get_efl_version)\n"
 command -v enlightenment_remote >/dev/null && \
-TXT+="\t$(_ "Moskha"): $(/usr/bin/enlightenment_remote -version)\n"
+TXT+="\t$(_ "Moksha"): $(/usr/bin/enlightenment_remote -version)\n"
 TXT+="\t$(_ "Kernel"): $(uname -sr)\n\n"
 
 TXT+="\\t<i>$(uptime)</i>\\n\\n"
