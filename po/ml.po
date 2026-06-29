@@ -1,0 +1,234 @@
+# Malayalam translation for the Sysinfo module.
+# Copyright (C) 2026 Bodhi Linux Team
+# This file is distributed under the same license as the sysinfo package.
+# Indraneel Rajeevan <https://github.com/indraneel12>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysinfo 1.0\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2026-06-18 16:32+0200\n"
+"PO-Revision-Date: 2026-06-29 11:49+0530\n"
+"Last-Translator: Indraneel Rajeevan <https://github.com/indraneel12>\n"
+"Language-Team: Malayalam\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: src/sysinfo.sh:66
+msgid "Module information"
+msgstr "മൊഡ്യൂൾ വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:66 src/sysinfo.sh:272
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: src/sysinfo.sh:86
+msgid "Threads"
+msgstr "ഥ്രെഡ്ഡുകൾ"
+
+#: src/sysinfo.sh:89
+msgid "CPU Cores"
+msgstr "സി·പി·യു· കോറുകൾ"
+
+#: src/sysinfo.sh:92
+msgid "Sockets"
+msgstr "സോക്കറ്റുകൾ"
+
+#: src/sysinfo.sh:95
+msgid "Threads per core"
+msgstr "ഥ്രെഡ്ഡുകൾ / കോറ്"
+
+#: src/sysinfo.sh:103
+msgid "CPU information"
+msgstr "സി·പി·യു· വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:104 src/sysinfo.sh:132 src/sysinfo.sh:137
+msgid "Parameter"
+msgstr "പരാമീറ്റർ"
+
+#: src/sysinfo.sh:104 src/sysinfo.sh:132 src/sysinfo.sh:137
+msgid "Value"
+msgstr "മൂല്യം"
+
+#: src/sysinfo.sh:122 src/sysinfo.sh:274
+msgid "GPU"
+msgstr "ജി·പി·യു·"
+
+#: src/sysinfo.sh:123
+msgid "Driver"
+msgstr "ഡ്രൈവർ"
+
+#: src/sysinfo.sh:124
+msgid "Resolution"
+msgstr "റെസല്യൂഷൻ"
+
+#: src/sysinfo.sh:125
+msgid "Renderer"
+msgstr "റെൻഡറർ"
+
+#: src/sysinfo.sh:126
+msgid "OpenGL"
+msgstr "ഓപ്പൺജിഎൽ"
+
+#: src/sysinfo.sh:127
+msgid "Session"
+msgstr "സെഷൻ"
+
+#: src/sysinfo.sh:130
+msgid "GPU information"
+msgstr "ജി·പി·യു· വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:136
+msgid "Memory usage information"
+msgstr "മെമ്മറി ഉപയോഗ വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:141
+msgid "Disk space usage"
+msgstr "ഡിസ്ക് സ്ഥല ഉപയോഗം"
+
+#: src/sysinfo.sh:142 src/sysinfo.sh:149 src/sysinfo.sh:161 src/sysinfo.sh:173
+msgid "Device"
+msgstr "ഡിവൈസ്"
+
+#: src/sysinfo.sh:142
+msgid "Mountpoint"
+msgstr "മൗണ്ട്പോയിന്റ്"
+
+#: src/sysinfo.sh:142
+msgid "Type"
+msgstr "തരം"
+
+#: src/sysinfo.sh:143
+msgid "Total:"
+msgstr "മൊത്തത്തിൽ:"
+
+#: src/sysinfo.sh:143
+msgid "Free:"
+msgstr "അവശിഷ്ടം:"
+
+#: src/sysinfo.sh:143
+msgid "Usage:"
+msgstr "ഉപയോഗം:"
+
+#: src/sysinfo.sh:147
+msgid "PCI bus devices"
+msgstr "പി·സി·ഐ· ബസ് ഡിവൈസുകൾ"
+
+#: src/sysinfo.sh:148
+msgid "ID"
+msgstr "ഐ·ഡി·"
+
+#: src/sysinfo.sh:148
+msgid "Class"
+msgstr "ക്ലാസ്"
+
+#: src/sysinfo.sh:149
+msgid "Vendor"
+msgstr "ദാതാവ്"
+
+#: src/sysinfo.sh:149
+msgid "Revision"
+msgstr "പുനരവലോകനം"
+
+#: src/sysinfo.sh:153
+msgid "Loaded kernel modules"
+msgstr "ലോഡ് ചെയ്ത കേർണൽ മൊഡ്യൂളുകൾ"
+
+#: src/sysinfo.sh:156
+msgid "Name"
+msgstr "പേര്"
+
+#: src/sysinfo.sh:156
+msgid "Used"
+msgstr "ഉപയോഗിച്ചത്"
+
+#: src/sysinfo.sh:156
+msgid "Depends"
+msgstr "ആശ്രിതത്വം"
+
+#: src/sysinfo.sh:160
+msgid "Battery state"
+msgstr "ബാറ്ററി നില"
+
+#: src/sysinfo.sh:161
+msgid "Details"
+msgstr "വിശദാംശങ്ങൾ"
+
+#: src/sysinfo.sh:171
+msgid "Network information"
+msgstr "നെറ്റ്‌വർക്ക് വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:255
+msgid "Not found"
+msgstr "കണ്ടെത്തിയില്ല"
+
+#: src/sysinfo.sh:261
+msgid "Hardware system information"
+msgstr "ഹാർഡ്‌വെയർ സിസ്റ്റം വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:262
+msgid "OS"
+msgstr "ഒ·എസ്·"
+
+#: src/sysinfo.sh:262
+msgid "on"
+msgstr "(മേല്)"
+
+#: src/sysinfo.sh:265
+msgid "Moksha"
+msgstr "മോക്ഷ"
+
+#: src/sysinfo.sh:266
+msgid "Kernel"
+msgstr "കേർണൽ"
+
+#: src/sysinfo.sh:272
+msgid "System information"
+msgstr "സിസ്റ്റം വിവരങ്ങൾ"
+
+#: src/sysinfo.sh:273
+msgid "Copy report"
+msgstr "റിപ്പോർട്ട് പകർത്തുക"
+
+#: src/sysinfo.sh:274
+msgid "CPU"
+msgstr "സി·പി·യു·"
+
+#: src/sysinfo.sh:274
+msgid "Memory"
+msgstr "മെമ്മറി"
+
+#: src/sysinfo.sh:275
+msgid "Disks"
+msgstr "ഡിസ്കുകൾ"
+
+#: src/sysinfo.sh:275
+msgid "PCI"
+msgstr "പി·സി·ഐ·"
+
+#: src/sysinfo.sh:275
+msgid "Modules"
+msgstr "മൊഡ്യൂളുകൾ"
+
+#: src/sysinfo.sh:276
+msgid "Battery"
+msgstr "ബാറ്ററി"
+
+#: src/sysinfo.sh:276
+msgid "Network"
+msgstr "നെറ്റ്‌വർക്ക്"
+
+#: data/sysinfo.desktop.in.h:1
+msgid "System Information"
+msgstr "സിസ്റ്റം വിവരങ്ങൾ"
+
+#: data/sysinfo.desktop.in.h:2
+msgid "Display hardware and system information"
+msgstr "ഹാർഡ്‌വെയറിന്റെയും സിസ്റ്റത്തിന്റെയും വിവരങ്ങൾ പ്രദർശിപ്പിക്കുക"
+
+#: data/sysinfo.desktop.in.h:3
+msgid "system;hardware;cpu;memory;disk;pci;network;battery;"
+msgstr "സിസ്റ്റം;ഹാർഡ്‌വെയർ;സി·പി·യു·;മെമ്മറി;ഡിസ്ക്;പി·സി·ഐ·;നെറ്റ്‌വർക്ക്;ബാറ്ററി;"
